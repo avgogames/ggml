@@ -5,6 +5,11 @@ set(TEST_TARGET simple-ctx)
 add_executable(${TEST_TARGET} simple-ctx.cpp)
 target_link_libraries(${TEST_TARGET} PRIVATE ggml)
 
+# simple-ctx2
+
+set(TEST_TARGET simple-ctx2)
+add_executable(${TEST_TARGET} simple-ctx2.cpp)
+target_link_libraries(${TEST_TARGET} PRIVATE ggml)
 #
 # simple-backend
 

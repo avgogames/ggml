@@ -480,6 +480,7 @@ if (MSVC)
         configure_msvc_target(sam)
 
         configure_msvc_target(simple-ctx)
+        configure_msvc_target(simple-ctx2)
         configure_msvc_target(simple-backend)
     endif()
 

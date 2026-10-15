@@ -89,6 +89,10 @@ struct ggml_cgraph * build_graph(simple_model& model) {
 
     // build operations nodes
     ggml_build_forward_expand(gf, result);
+    ggml_graph_print(gf);
+    ggml_graph_dump_dot(gf, NULL, "debug.dot");
+    
+
 
     ggml_free(ctx);
 
@@ -144,7 +148,7 @@ int main(void) {
         }
     }
     printf(" ]\n");
-
+    
     // release backend memory and free backend
     ggml_backend_sched_free(model.sched);
     ggml_backend_free(model.backend);
